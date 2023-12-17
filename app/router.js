@@ -6,4 +6,6 @@ module.exports = app => {
   router.get('/', controller.home.index);
   // 获取列表
   router.get('/list', controller.home.list);
+
+  router.get('/test', controller.home.test);
 };

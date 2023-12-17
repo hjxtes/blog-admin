@@ -1,4 +1,4 @@
-const { Controller } = require('egg');
+const Controller = require('egg').Controller
 
 class HomeController extends Controller {
   async index() {
@@ -8,12 +8,19 @@ class HomeController extends Controller {
   }
 
   // 获取列表
-  list() {
+  async list() {
     const { ctx } = this
     ctx.body = {
       msg: 'success',
       data: [{name: 'like', age: '11'}]
     }
+  }
+
+  async test() {
+    const { ctx } = this
+    const { test } = ctx.service
+
+    ctx.body = await test.getTest()
   }
 }
 
