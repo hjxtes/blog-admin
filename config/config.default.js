@@ -23,7 +23,7 @@ module.exports = appInfo => {
 
   //mongoose数据库配置
   config.mongoose = {
-    url: 'mongodb://127.0.0.1:27017/test', //端口号27021数据库名test
+    url: 'mongodb://127.0.0.1:27017/blog', //端口号27021数据库名blog
     options: {useNewUrlParser:true,useUnifiedTopology:true}
   }
 
